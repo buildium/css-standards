@@ -10,8 +10,6 @@
 
 ## Mission and goals
 
-As developers as Buildium, we want to create simple ways to find styles that exist or create new styles, so we can modify pages with the confidence that we are not duplicating code or interfering with the styles on other pages.
-
 ### simplicity
 
 Something simple has a clear purpose and direction, while something easy is that which is near at hand and familiar.  Using ID's as CSS selectors is easy, but not necessarily simple, because in the long run it will create complicated specificity issues.
