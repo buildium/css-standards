@@ -47,7 +47,7 @@ To help organize and optimize our stylesheets, we use LESS.
 
 A typical Angular component directory (a search bar directive, in this case) will look like this:
 
-```css
+```
 buildium-base/components/search
 
 -search.html           //template
