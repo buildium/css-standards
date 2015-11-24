@@ -7,15 +7,15 @@
 1. [Mission and goals](#mission)
 2. [Our Tools](#our-tools)
 3. [Organizing stylesheets](#organizing)
-4. [Common variables](#common)
+4. [Common variables](#common-variables)
 5. [Naming](#naming)
-6. [Positioning/Layout](#positioning)
+6. [Positioning and layout](#positioning-and-layout)
 7. [Consistent order of properties](#consistent)
 8. [Specificity](#specificity)
-9. [Shorthand vs. longhand](#shorthand)
+9. [Shorthand vs. longhand](#shorthand-vs-longhand)
 10. [Formatting](#formatting)
 11. [Styleguide](#styleguide)
-12. [Resources and further reading](#resources)
+12. [Resources and further reading](#resources-and-further-reading)
 
 ## Mission and goals
 
