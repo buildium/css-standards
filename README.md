@@ -4,13 +4,13 @@
 
 ## Table of Contents
 
-1. [Mission and goals](#mission)
+1. [Mission and goals](#mission-and-goals)
 2. [Our Tools](#our-tools)
-3. [Organizing stylesheets](#organizing)
+3. [Organizing stylesheets](#organizing-stylesheets)
 4. [Common variables](#common-variables)
 5. [Naming](#naming)
 6. [Positioning and layout](#positioning-and-layout)
-7. [Consistent order of properties](#consistent)
+7. [Consistent order of properties](#consistent-order-of-properties)
 8. [Specificity](#specificity)
 9. [Shorthand vs. longhand](#shorthand-vs-longhand)
 10. [Formatting](#formatting)
@@ -264,7 +264,7 @@ Documentation is great, but writing and reading it should be convenient and loca
 
 We use kss-node to generate docs from comments in styles.
 <ul>
- <li>Spec is https://github.com/kss-node/kss/blob/spec/SPEC.md
+ <li>Spec is https://github.com/kss-node/kss/blob/spec/SPEC.md</li
 <li>Comments should have a title and a description.</li>
 <li>Separate markup will be generated for each modifier class (.selected, in the example below the description text), using the Markup field.</li>
 <li>We’ve added a DocUrl field to the spec, that links to our living styleguide.</li>
