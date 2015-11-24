@@ -69,7 +69,7 @@ All colors should be defined as common variables, and we store them in buildium-
 
 ##Naming
 
-We use th Block Element Modifier (BEM) naming convention.  BEM-style names are, in general, very descriptive. They also provide a way of indicating hierarchy without the side-effects of nesting classes and causing specificity battles. Finally, BEM is very conducive to creating a component-based UI (which we strive for in our Angular-based code).
+We use the Block Element Modifier (BEM) naming convention.  BEM-style names are, in general, very descriptive. They also provide a way of indicating hierarchy without the side-effects of nesting classes and causing specificity battles. Finally, BEM is very conducive to creating a component-based UI (which we strive for in our Angular-based code).
 
 block__element-modifier
 
