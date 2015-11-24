@@ -5,10 +5,10 @@
 ## Table of Contents
 
 1. [Mission and goals](#mission-and-goals)
-2. [Our Tools](#our-tools)
+2. [Our tools](#our-tools)
 3. [Organizing stylesheets](#organizing-stylesheets)
 4. [Common variables](#common-variables)
-5. [Naming](#naming)
+5. [Naming](#naming-block-element-modifier-bem)
 6. [Positioning and layout](#positioning-and-layout)
 7. [Consistent order of properties](#consistent-order-of-properties)
 8. [Specificity](#specificity)
@@ -47,7 +47,7 @@ To help organize and optimize our stylesheets, we use LESS.
 
 A typical Angular component directory (a search bar directive, in this case) will look like this:
 
-```
+```css
 buildium-base/components/search
 
 -search.html           //template
@@ -75,7 +75,7 @@ block__element-modifier
 
 Always try to make class names meaningful -- "large" is better than 600, "primary" is better than blue.
 
-```
+```css
 //less
 
 .search__entity-list {
@@ -108,7 +108,7 @@ Always try to make class names meaningful -- "large" is better than 600, "primar
 
 It’s better to separate out what is essential to all form columns (positioning and gutters) and what is a specific modifier (width).
 
-```
+```css
 
 //Avoid - does too many things
 
@@ -141,7 +141,7 @@ Seperate positioning and layout from reuseable components.  We use a grid system
 
 Lay out your pages using rows and columns.  For forms (the most common type of page in our application), we use a .form__column class with appropriate modifiers for width:
 
-```
+```html
 <div class="row">
     <div class="form__column form__column--default" bd-form-element>
         <label class="form__label" for="required">Required</label>
@@ -173,7 +173,7 @@ When writing a class, group different CSS properties together and place them in 
 	3.  Typographic
 	4.  Visual
 
-```
+```css
 .declaration-order {
     /* Positioning */
     position: absolute;
@@ -212,7 +212,7 @@ When writing a class, group different CSS properties together and place them in 
 	<li>Try to only override a property at most 1 time: </li>
 </ul>
 
-```
+```css
 .my-class {
 	font-size: 12px;
 	text-align: center;
@@ -264,11 +264,12 @@ Documentation is great, but writing and reading it should be convenient and loca
 
 We use kss-node to generate docs from comments in styles.
 <ul>
- <li>Spec is https://github.com/kss-node/kss/blob/spec/SPEC.md</li
-<li>Comments should have a title and a description.</li>
-<li>Separate markup will be generated for each modifier class (.selected, in the example below the description text), using the Markup field.</li>
-<li>We’ve added a DocUrl field to the spec, that links to our living styleguide.</li>
-<li>The Styleguide variable at the end will put your comments in the right place.</li>
+	<li>Spec is https://github.com/kss-node/kss/blob/spec/SPEC.md</li>
+	<li>Comments should have a title and a description.</li>
+	<li>Separate markup will be generated for each modifier class (.selected, in the example below the description text), using the Markup field.</li>
+	<li>We’ve added a DocUrl field to the spec, that links to our living styleguide.</li>
+	<li>The Styleguide variable at the end will put your comments in the right place.</li>
+</ul>
 
 Example:
 
