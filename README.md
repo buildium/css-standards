@@ -8,7 +8,7 @@
 2. [Our tools](#our-tools)
 3. [Organizing stylesheets](#organizing-stylesheets)
 4. [Common variables](#common-variables)
-5. [Naming](#naming-block-element-modifier-bem)
+5. [Naming](#naming)
 6. [Positioning and layout](#positioning-and-layout)
 7. [Consistent order of properties](#consistent-order-of-properties)
 8. [Specificity](#specificity)
@@ -67,9 +67,9 @@ Use common mixins for visual behaviors that are likely repeated throughout the s
 
 All colors should be defined as common variables, and we store them in buildium-base/styles/variables/colors.less
 
-##Naming - Block Element Modifier (BEM)
+##Naming
 
-BEM-style names are, in general, very descriptive. They also provide a way of indicating hierarchy without the side-effects of nesting classes and causing specificity battles. Finally, BEM is very conducive to creating a component-based UI (which we strive for in our Angular-based code).
+We use th Block Element Modifier (BEM) naming convention.  BEM-style names are, in general, very descriptive. They also provide a way of indicating hierarchy without the side-effects of nesting classes and causing specificity battles. Finally, BEM is very conducive to creating a component-based UI (which we strive for in our Angular-based code).
 
 block__element-modifier
 
@@ -93,7 +93,6 @@ Always try to make class names meaningful -- "large" is better than 600, "primar
    background-color: @focusHighlight;
 }
 
-
 //view
 
 <ul class="search__entity-list">
@@ -103,13 +102,11 @@ Always try to make class names meaningful -- "large" is better than 600, "primar
     ng-class="{ 'search__entity-list-item--active': item === search.activeItem }"
     ng-mouseover="search.activeItem = item">
 </ul>
-
 ```
 
 It’s better to separate out what is essential to all form columns (positioning and gutters) and what is a specific modifier (width).
 
 ```css
-
 //Avoid - does too many things
 
 .formColumnSmall {
@@ -132,7 +129,6 @@ It’s better to separate out what is essential to all form columns (positioning
 .form__column--default {
    width: 202.5px;
 }
-
 ```
 
 ## Positioning/Layout
@@ -150,7 +146,6 @@ Lay out your pages using rows and columns.  For forms (the most common type of p
 </div>
 
 <div class="form__vertical-spacer form__vertical-spacer--medium"></div>
-
 ```
 
 You'll notice we handle vertical spacing using specific spacing elements.
@@ -167,11 +162,12 @@ Instead, we strive to write components that take up the full size of their conta
 By keeping a consistent order of properties within a class, it’s easier to quickly read/write an existing class. Basically, it takes away the need to search through the entire class to see if a given property is set.
 
 When writing a class, group different CSS properties together and place them in the following order (credit to Mark Otto @mdo):
-
-	1.  Positioning
-	2.  Display and box mode
-	3.  Typographic
-	4.  Visual
+<ul>
+	<li>Positioning</li>
+	<li>Display and box mode</li>
+	<li>Typographic</li>
+	<li>Visual</li>
+</ul>
 
 ```css
 .declaration-order {
@@ -274,8 +270,6 @@ We use kss-node to generate docs from comments in styles.
 Example:
 
 ```
-
-
 /*
 Tabs
 
@@ -298,13 +292,14 @@ http://styleguide.buildium.com/dm01-1400-tabs/
 
 Styleguide 3.1
 */
-
 ```
 
 ## Resources and further reading
 
 <a href="http://codeguide.co/#css-declaration-order">CSS and HTML styleguide</a> by Mark Otto.
+
 <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding – getting your head ’round BEM syntax</a>
+
 <a href="https://css-tricks.com/bem-101/">BEM 101</a>
 
 
