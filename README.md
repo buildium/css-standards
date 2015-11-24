@@ -9,7 +9,7 @@
 3. [Organizing stylesheets](#organizing)
 4. [Common variables](#common)
 5. [Naming](#naming)
-6  [Positioning/Layout](#positioning)
+6. [Positioning/Layout](#positioning)
 7. [Consistent order of properties](#consistent)
 8. [Specificity](#specificity)
 9. [Shorthand vs. longhand](#shorthand)
