@@ -57,21 +57,19 @@ buildium-base/components/search
 
 ```
 
-As you can see, this component contains it's own stylesheet.  This is imported into a file in the root components directory called main.less.
+As you can see, this component contains its own stylesheet.  This is imported into a file in the root components directory called main.less.
 
 components/main.less is then imported into a styles directory within buildium-base.  This style directory contains common elements like mixins, variables, and other tools that we'd like access to when writing component specific styles.  This approach keeps the component specific stylesheets lean, and also reserves a special place to write styles that can be used globally.
 
 ##Common Variables
 
-Use common mixins for visual behaviors that are likely repeated throughout the site such as colors, box-shadow, border-radius, etc...
+Use common mixins for visual behaviors that are likely repeated throughout the site such as colors, box-shadow, border-radius, etc.
 
-All colors should be defined as common variables, and we store them in buildium-base/styles/variables/colors.less
+All colors should be defined as common variables, and we store them in buildium-base/styles/variables/colors.less.
 
 ##Naming
 
-We use the Block Element Modifier (BEM) naming convention.  BEM-style names are, in general, very descriptive. They also provide a way of indicating hierarchy without the side-effects of nesting classes and causing specificity battles. Finally, BEM is very conducive to creating a component-based UI (which we strive for in our Angular-based code).
-
-block__element-modifier
+We use the <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">Block Element Modifier (BEM)</a> naming convention.  BEM-style names are, in general, very descriptive. They also provide a way of indicating hierarchy without the side-effects of nesting classes and causing specificity battles. Finally, BEM is very conducive to creating a component-based UI (which we strive for in our Angular-based code).  Class names in BEM follow this pattern: block__element--modifier.
 
 Always try to make class names meaningful -- "large" is better than 600, "primary" is better than blue.
 
@@ -92,7 +90,8 @@ Always try to make class names meaningful -- "large" is better than 600, "primar
 .search__entity-list-item--active {
    background-color: @focusHighlight;
 }
-
+```
+```html
 //view
 
 <ul class="search__entity-list">
@@ -133,7 +132,7 @@ It’s better to separate out what is essential to all form columns (positioning
 
 ## Positioning/Layout
 
-Seperate positioning and layout from reuseable components.  We use a grid system for positioning, making things predictable and preventing a specific component's styles from affecting others.
+Separate positioning and layout from reuseable components.  We use a grid system for positioning, making things predictable, and preventing a specific component's styles from affecting others.
 
 Lay out your pages using rows and columns.  For forms (the most common type of page in our application), we use a .form__column class with appropriate modifiers for width:
 
@@ -159,7 +158,7 @@ Instead, we strive to write components that take up the full size of their conta
 
 ## Consistent order of properties
 
-By keeping a consistent order of properties within a class, it’s easier to quickly read/write an existing class. Basically, it takes away the need to search through the entire class to see if a given property is set.
+By keeping a consistent order of properties within a class, it’s easier to quickly read/write an existing class. It takes away the need to search through the entire class to see if a given property is set.
 
 When writing a class, group different CSS properties together and place them in the following order (credit to Mark Otto @mdo):
 <ul>
@@ -203,7 +202,7 @@ When writing a class, group different CSS properties together and place them in 
 ##Specificity
 <ul>
 	<li>Use classes.  No ID's!
-	<li>Elements: Only use them for resetting or noramlizing styles between browsers.
+	<li>Elements: only use them for resetting or normalizing styles between browsers.
 	<li>If using JS to access a class, prefix it with js-, i.e. js-my-selector and use it only for JS
 	<li>Try to only override a property at most 1 time: </li>
 </ul>
@@ -225,14 +224,14 @@ When writing a class, group different CSS properties together and place them in 
 <ul>
 	<li>Define colors in their own less files using upper-case, long-hand Hex format. For example #FFFFFF;</li>
 	<li>Define all sizes in properties that take 4 arguments:  border: 0 0 0 1px vs border-left: 1px;</li>
-	<li>Overriding classes use more specific properties, if possible:  border-left: 1px vs border: 0 0 0 1px;</li>
+	<li>Use more specific properties when overriding classes, if possible:  border-left: 1px vs border: 0 0 0 1px;</li>
 </ul>
 
 ## Formatting
 
 <ul>
 	<li>Curly braces should start on the same line as the class name, with one space between.</li>
-	<li>Each property should have it's own line, with semi-colons, and one space between.</li>
+	<li>Each property should have its own line, with semi-colons, and one space between.</li>
 	<li>Avoid using 0px, 0em, etc.;  instead use 0.</li>
 	<li>Each class should have a line between.</li>
 	<li>Avoid nesting classes, if possible.</li>
